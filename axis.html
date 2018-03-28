@@ -1,0 +1,2220 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Axis layer &mdash; pyIcePAP 1.23.0-alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="pyIcePAP 1.23.0-alpha documentation" href="index.html"/>
+        <link rel="up" title="API v2.0" href="api.html"/>
+        <link rel="next" title="Firmware version" href="fwversion.html"/>
+        <link rel="prev" title="Controller layer" href="controller.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> pyIcePAP
+          
+
+          
+            
+            <img src="_static/ALBALogo_WHITE.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.23
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">API v2.0</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="communication.html">Communication layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="controller.html">Controller layer</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Axis layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fwversion.html">Firmware version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="utils.html">Utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="legacy.html">Legacy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="low_level_methods.html">Low-level methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">PyIcepPAP console application</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pyIcePAP</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="api.html">API v2.0</a> &raquo;</li>
+        
+      <li>Axis layer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/axis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pyIcePAP.axis">
+<span id="axis-layer"></span><h1>Axis layer<a class="headerlink" href="#module-pyIcePAP.axis" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pyIcePAP.axis.IcePAPAxis">
+<em class="property">class </em><code class="descclassname">pyIcePAP.axis.</code><code class="descname">IcePAPAxis</code><span class="sig-paren">(</span><em>ctrl</em>, <em>axis_nr</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis" title="Permalink to this definition">¶</a></dt>
+<dd><p>The IcePAP axis class contains the common IcePAP ASCii API for any
+IcePAP axis. The methods here implemented correspond to those
+at the axis level.</p>
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.abort">
+<code class="descname">abort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.abort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Abort the current movement (IcePAP user manual pag. 46).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.acctime">
+<code class="descname">acctime</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.acctime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the acceleration time (see get_acceleration method).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.acctime_default">
+<code class="descname">acctime_default</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.acctime_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the default acceleration time (see get_acceleration method).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.acctime_step">
+<code class="descname">acctime_step</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.acctime_step" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the acceleration in steps distances (see get_acceleration method).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.active">
+<code class="descname">active</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.active" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get if the axis is active (IcePAP user manual pag. 47).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.addr">
+<code class="descname">addr</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.addr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the axis number (IcePAP user manual pag. 49).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.alarm">
+<code class="descname">alarm</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.alarm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get if the axis is in alarm condition (IcePAP user manual pag. 50).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">[bool, str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.auxps">
+<code class="descname">auxps</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.auxps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get if the auxiliary power supply is ON (IcePAP user manual pag. 52).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.blink">
+<code class="descname">blink</code><span class="sig-paren">(</span><em>secs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.blink" title="Permalink to this definition">¶</a></dt>
+<dd><p>Blink the driver status led for a given amount of time (Icepap user
+manual pag. 53).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>secs</strong> – number of second to blink.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.cjog">
+<code class="descname">cjog</code><span class="sig-paren">(</span><em>vel</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.cjog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set jog velocity in configuration mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vel</strong> – float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.clear_ecam_table">
+<code class="descname">clear_ecam_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.clear_ecam_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean the electronic cam table (Icepap user manual pag. 65).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.clear_list_table">
+<code class="descname">clear_list_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.clear_list_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean the position list table (Icepap user manual pag. 87).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.clear_parametric_table">
+<code class="descname">clear_parametric_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.clear_parametric_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clean the parametric trajectory table.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.cmove">
+<code class="descname">cmove</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.cmove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start absolute movement in configuration mode (IcePAP user manual
+pag.58).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> – float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.config">
+<code class="descname">config</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the identifier of the last valid configuration. To change the
+configuration use set_config method (IcePAP user manual pag. 59).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.cswitch">
+<code class="descname">cswitch</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.cswitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the limit switches configuration (IcePAP user manual pag. 60).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.ctrlrst">
+<code class="descname">ctrlrst</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.ctrlrst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset control encoder value.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.ecam">
+<code class="descname">ecam</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.ecam" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the electronic cam mode (IcePAP user manual pag. 64).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.enc">
+<code class="descname">enc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.enc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the axis nominal position pointer (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.enc_absenc">
+<code class="descname">enc_absenc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.enc_absenc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the absenc register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.enc_ctrlenc">
+<code class="descname">enc_ctrlenc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.enc_ctrlenc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the ctrlenc register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.enc_encin">
+<code class="descname">enc_encin</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.enc_encin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the encin register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.enc_inpos">
+<code class="descname">enc_inpos</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.enc_inpos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the inpos register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.enc_motor">
+<code class="descname">enc_motor</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.enc_motor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the motor register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.enc_shftenc">
+<code class="descname">enc_shftenc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.enc_shftenc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the shftenc register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.enc_sync">
+<code class="descname">enc_sync</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.enc_sync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the sync register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.enc_tgtenc">
+<code class="descname">enc_tgtenc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.enc_tgtenc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the tgtenc register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.esync">
+<code class="descname">esync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.esync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synchronize internal position registers.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_acceleration">
+<code class="descname">get_acceleration</code><span class="sig-paren">(</span><em>atype=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_acceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the acceleration time (IcePAP user manual pag. 48).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float [seconds]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_cfg">
+<code class="descname">get_cfg</code><span class="sig-paren">(</span><em>parameter=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_cfg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current configuration for one or all parameters (IcePAP user
+manual pag. 54).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>parameter</strong> – str (optional)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_cfginfo">
+<code class="descname">get_cfginfo</code><span class="sig-paren">(</span><em>parameter=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_cfginfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the configuration type for one or all parameters.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>parameter</strong> – str (optional)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">dict</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_ecam_table">
+<code class="descname">get_ecam_table</code><span class="sig-paren">(</span><em>dtype='FLOAT'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_ecam_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the position table loaded on the electronic cam table (IcePAP user
+manual pag. 65).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dtype</strong> – str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[float]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_enc">
+<code class="descname">get_enc</code><span class="sig-paren">(</span><em>register</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_enc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the position register in encoder step (IcePAP user manual
+pag. 68).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>register</strong> – str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_home_encoder">
+<code class="descname">get_home_encoder</code><span class="sig-paren">(</span><em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_home_encoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the value latched on encoder register (IcePAP user manual
+pag. 77)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>register</strong> – str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_home_position">
+<code class="descname">get_home_position</code><span class="sig-paren">(</span><em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_home_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the value latched on the position register (IcePAP user manual
+pag. 78).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>register</strong> – str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_list_table">
+<code class="descname">get_list_table</code><span class="sig-paren">(</span><em>dtype='FLOAT'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_list_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the position list table (IcePAP user manual pag. 87).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dtype</strong> – str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[float]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_parametric_table">
+<code class="descname">get_parametric_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_parametric_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parametric table.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">[[float]] ([parameter], [position], [slope])</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_parval">
+<code class="descname">get_parval</code><span class="sig-paren">(</span><em>parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_parval" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the motor position for a parameter value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>parameter</strong> – float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_pos">
+<code class="descname">get_pos</code><span class="sig-paren">(</span><em>register</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the position register in axis units (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>register</strong> – str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_velocity">
+<code class="descname">get_velocity</code><span class="sig-paren">(</span><em>vtype=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the velocity (IcePAP user manual pag. 143).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>vtype</strong> – str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">float [steps per second]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.home">
+<code class="descname">home</code><span class="sig-paren">(</span><em>mode=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.home" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start home signal search sequence (Icepap user manual pag. 76).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>mode</strong> – int [-1, 0, 1]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.homestat">
+<code class="descname">homestat</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.homestat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the homing procedure status (IcePAP user manual pag. 79).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">[str(state), int(direction)]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.id">
+<code class="descname">id</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get hardware ID and the serial number (Icepap user manual pag. 80).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(str HW ID, str SN)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.indexer">
+<code class="descname">indexer</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.indexer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the indexer signal source used for the axis indexer (IcePAP user
+manual pag. 81).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.infoa">
+<code class="descname">infoa</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.infoa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the InfoA configuration (Icepap user manual pag. 82).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(str, str) [Signal, Polarity]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.infob">
+<code class="descname">infob</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.infob" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the InfoB configuration (Icepap user manual pag. 82).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(str, str) [Signal, Polarity]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.infoc">
+<code class="descname">infoc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.infoc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the InfoC configuration (Icepap user manual pag. 82).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(str, str) [Signal, Polarity]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.jog">
+<code class="descname">jog</code><span class="sig-paren">(</span><em>veloctiy</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.jog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start the jog mode at the given velocity (IcePAP user manual pag. 85).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>veloctiy</strong> – float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.jog_velocity">
+<code class="descname">jog_velocity</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.jog_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the current jog velocity.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas">
+<code class="descname">meas</code><span class="sig-paren">(</span><em>parameter</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a measured value for the parameter (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>parameter</strong> – str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_i">
+<code class="descname">meas_i</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the motor current (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_ia">
+<code class="descname">meas_ia</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_ia" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the phase a current (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_ib">
+<code class="descname">meas_ib</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_ib" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the phase b current (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_ic">
+<code class="descname">meas_ic</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_ic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the phase c current (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_r">
+<code class="descname">meas_r</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the motor resistance (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_ra">
+<code class="descname">meas_ra</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_ra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the phase a resistance (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_rb">
+<code class="descname">meas_rb</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_rb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the phase b resistance (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_rc">
+<code class="descname">meas_rc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_rc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the phase c resistance (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_rt">
+<code class="descname">meas_rt</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_rt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the power supply temperature (IcePAP user manual
+pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_t">
+<code class="descname">meas_t</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the board temperature (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_vcc">
+<code class="descname">meas_vcc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_vcc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the main power supply (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.meas_vm">
+<code class="descname">meas_vm</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.meas_vm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Measured value of the motor voltage (IcePAP user manual pag. 89).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.mode">
+<code class="descname">mode</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current mode of the axis: CONFIG, OPER, PROG, TEST, FAIL
+(IcePAP user manual pag. 91).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.move">
+<code class="descname">move</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.move" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start absolute movement (IcePAP user manual pag. 92).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>position</strong> – long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.movel">
+<code class="descname">movel</code><span class="sig-paren">(</span><em>lpos</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.movel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start postion list movement (IcePAP user manual pag. 93).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>lpos</strong> – int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.movep">
+<code class="descname">movep</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.movep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start axis movement to a parameter value.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> – float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.name">
+<code class="descname">name</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the axis name (Icepap user manual pag. 95).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.outpaux">
+<code class="descname">outpaux</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.outpaux" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the OutPAux configuration (Icepap user manual pag. 97).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(str, str) [Signal, Polarity]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.outpos">
+<code class="descname">outpos</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.outpos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the OutPos configuration (Icepap user manual pag. 98)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(str, str) [Signal, Polarity]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.paracct">
+<code class="descname">paracct</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.paracct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parametric acceleration time (IcePAP user manual pag. 99).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.parpos">
+<code class="descname">parpos</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.parpos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the position on parametric units (IcePAP user manual pag. 103).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.parvel">
+<code class="descname">parvel</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.parvel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the parametric axis velocity (IcePAP user manual pag. 104).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.pcloop">
+<code class="descname">pcloop</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pcloop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read if the position close loop is enabled (IcePAP user manual
+pag. 105).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.pmove">
+<code class="descname">pmove</code><span class="sig-paren">(</span><em>pos</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pmove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start parametric movement (IcePAP user manual pag. 106).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>pos</strong> – float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.pos">
+<code class="descname">pos</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the axis nominal position pointer (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.pos_absenc">
+<code class="descname">pos_absenc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pos_absenc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the absenc register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.pos_ctrlenc">
+<code class="descname">pos_ctrlenc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pos_ctrlenc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the ctrlenc register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.pos_encin">
+<code class="descname">pos_encin</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pos_encin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the encin register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.pos_inpos">
+<code class="descname">pos_inpos</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pos_inpos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the inpos register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.pos_motor">
+<code class="descname">pos_motor</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pos_motor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the motor register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.pos_shftenc">
+<code class="descname">pos_shftenc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pos_shftenc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the shftenc register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.pos_sync">
+<code class="descname">pos_sync</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pos_sync" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the sync register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.pos_tgtenc">
+<code class="descname">pos_tgtenc</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.pos_tgtenc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the tgtenc register (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.post">
+<code class="descname">post</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.post" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the result of the power-on self test. Zero means there were not
+errors (IcePAP user manual pag. 110).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.power">
+<code class="descname">power</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.power" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get if the axis is ON (IcePAP user manual pag. 111).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.print_commands">
+<code class="descname">print_commands</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.print_commands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the allows commands (IcePAP user manual pag. 75).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.ptrack">
+<code class="descname">ptrack</code><span class="sig-paren">(</span><em>signal</em>, <em>mode='FULL'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.ptrack" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start parametric tracking mode (IcePAP user manual pag. 114).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>signal</strong> – str</li>
+<li><strong>mode</strong> – str</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.rmove">
+<code class="descname">rmove</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.rmove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start absolute relative movement (IcePAP user manual pag. 140).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>position</strong> – long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.send_cmd">
+<code class="descname">send_cmd</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.send_cmd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper to add the axis number.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cmd</strong> – Command without axis number</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.set_acceleration">
+<code class="descname">set_acceleration</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_acceleration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the acceleration time (IcePAP user manual pag. 48).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> – float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.set_cfg">
+<code class="descname">set_cfg</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_cfg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the configuration of a parameter or change to Default/Expert
+configuration (IcePAP user manual pag. 54).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> – List of arguments: (parameter, value) or (‘Default’)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.set_config">
+<code class="descname">set_config</code><span class="sig-paren">(</span><em>config=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set configuration (IcePAP user manual pag. 59).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>config</strong> – str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.set_ecam_table">
+<code class="descname">set_ecam_table</code><span class="sig-paren">(</span><em>lpos</em>, <em>source='AXIS'</em>, <em>dtype='FLOAT'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_ecam_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the position list to the electronic cam table. The maximum memory
+size of the table is 81908 bytes. After to load the electronic cam
+is ON (IcePAP user manual pag. 65).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lpos</strong> – [float]</li>
+<li><strong>source</strong> – str</li>
+<li><strong>dtype</strong> – str</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.set_enc">
+<code class="descname">set_enc</code><span class="sig-paren">(</span><em>register</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_enc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position register in encoder step (IcePAP user manual pag. 68).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>register</strong> – str</li>
+<li><strong>value</strong> – long</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.set_list_table">
+<code class="descname">set_list_table</code><span class="sig-paren">(</span><em>lpos</em>, <em>cyclic=False</em>, <em>dtype='FLOAT'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_list_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a position list table (Icepap user manual pag. 87).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lpos</strong> – [float]</li>
+<li><strong>cyclic</strong> – bool</li>
+<li><strong>dtype</strong> – str</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.set_parametric_table">
+<code class="descname">set_parametric_table</code><span class="sig-paren">(</span><em>lparam</em>, <em>lpos</em>, <em>lslope=None</em>, <em>mode='SPLINE'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_parametric_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to set the parametric trajectory data (IcePAP user manual
+pag. 100).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>lparam</strong> – [float]</li>
+<li><strong>lpos</strong> – [float]</li>
+<li><strong>lslope</strong> – [float]</li>
+<li><strong>mode</strong> – str [Linear, Spline, Cyclic]’</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.set_pos">
+<code class="descname">set_pos</code><span class="sig-paren">(</span><em>register</em>, <em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_pos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the position register in axis units (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>register</strong> – str</li>
+<li><strong>value</strong> – long</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.set_velocity">
+<code class="descname">set_velocity</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the velocity (IcePAP user manual pag. 143).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> – float</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">float [steps per second]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state">
+<code class="descname">state</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the axis status and return a util.State object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">State</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_5vpower">
+<code class="descname">state_5vpower</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_5vpower" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the auxiliary power is On.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_alive">
+<code class="descname">state_alive</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_alive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the alive flag is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_disable_code">
+<code class="descname">state_disable_code</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_disable_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the disable code.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_disable_str">
+<code class="descname">state_disable_str</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_disable_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the disable string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_disabled">
+<code class="descname">state_disabled</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_disabled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the disable flag is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_indexer_code">
+<code class="descname">state_indexer_code</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_indexer_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the indexer code.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_indexer_str">
+<code class="descname">state_indexer_str</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_indexer_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the indexer string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_info_code">
+<code class="descname">state_info_code</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_info_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the info code.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_inhome">
+<code class="descname">state_inhome</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_inhome" title="Permalink to this definition">¶</a></dt>
+<dd><p>Chekc if the home flag is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_limit_negative">
+<code class="descname">state_limit_negative</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_limit_negative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the flag limit_negative is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_limit_positive">
+<code class="descname">state_limit_positive</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_limit_positive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the flag limit_positive is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_mode_code">
+<code class="descname">state_mode_code</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_mode_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_mode_str">
+<code class="descname">state_mode_str</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_mode_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the current mode.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_moving">
+<code class="descname">state_moving</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_moving" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the moving flag is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_outofwin">
+<code class="descname">state_outofwin</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_outofwin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the outofwin flag is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_poweron">
+<code class="descname">state_poweron</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_poweron" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the flag poweron is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_present">
+<code class="descname">state_present</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_present" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the present flag is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_ready">
+<code class="descname">state_ready</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_ready" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the ready flag is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_settling">
+<code class="descname">state_settling</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_settling" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the settling flag is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_stop_code">
+<code class="descname">state_stop_code</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_stop_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the stop code.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_stop_str">
+<code class="descname">state_stop_str</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_stop_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the stop string.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_vererr">
+<code class="descname">state_vererr</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_vererr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the vererr flag is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.state_warning">
+<code class="descname">state_warning</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.state_warning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if the warning flag is active.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.status">
+<code class="descname">status</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return axis status word 32-bits (IcePAP user manual pag. 128).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.stop">
+<code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop the current movement with a normal deceleration ramp (IcePAP user
+manual pag. 129).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.stopcode">
+<code class="descname">stopcode</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.stopcode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return axis stop code word 16-bits (IcePAP user manual pag. 130).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.syncaux">
+<code class="descname">syncaux</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.syncaux" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the SyncAux configuration (Icepap user manual pag. 82).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(str, str) [Signal, Polarity]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.syncpos">
+<code class="descname">syncpos</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.syncpos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the SyncPos configuration (Icepap user manual pag. 134).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(str, str) [Signal, Polarity]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.track">
+<code class="descname">track</code><span class="sig-paren">(</span><em>signal</em>, <em>mode='FULL'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.track" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start position tracking mode (IcePAP user manual pag. 139).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>signal</strong> – str</li>
+<li><strong>mode</strong> – str</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.umove">
+<code class="descname">umove</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.umove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start absolute updated movement (IcePAP user manual pag. 140).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>position</strong> – long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.velocity">
+<code class="descname">velocity</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the nominal velocity (see get_velocity method).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.velocity_current">
+<code class="descname">velocity_current</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.velocity_current" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the default velocity (see get_velocity method).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.velocity_default">
+<code class="descname">velocity_default</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.velocity_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the default velocity (see get_velocity method).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.velocity_max">
+<code class="descname">velocity_max</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.velocity_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the maximum velocity (see get_velocity method).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.velocity_min">
+<code class="descname">velocity_min</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.velocity_min" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the minimum velocity (see get_velocity method).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.ver">
+<code class="descname">ver</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.ver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the version of the all driver modules: Driver, DSP, FPGA, PCB, IO
+(IcePAP user manual pag. 144).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dict{module: (ver, date)}</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.vstatus">
+<code class="descname">vstatus</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.vstatus" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the axis status as multi-line verbose answer (IcePAP user
+manual pag. 146).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.vstopcode">
+<code class="descname">vstopcode</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.vstopcode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the message corresponding to the last motion’s stop code
+(IcePAP user manual pag. 147).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.warning">
+<code class="descname">warning</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.warning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a list of string describing warning conditions (IcePAP user
+manual pag. 150).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">[str]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.wtemp">
+<code class="descname">wtemp</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.wtemp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the set temperature warning value (IcePAP user manual pag. 151).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">float</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fwversion.html" class="btn btn-neutral float-right" title="Firmware version" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="controller.html" class="btn btn-neutral" title="Controller layer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright Copyright 2008-2017 CELLS / ALBA Synchrotron, Bellaterra, Spain.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.23.0-alpha',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
