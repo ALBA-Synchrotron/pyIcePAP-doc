@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>PyIcepPAP console application &mdash; pyIcePAP 2.1.1 documentation</title>
+  <title>PyIcepPAP console application &mdash; pyIcePAP 2.2.0 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pyIcePAP 2.1.1 documentation" href="index.html"/>
+    <link rel="top" title="pyIcePAP 2.2.0 documentation" href="index.html"/>
         <link rel="prev" title="Backups" href="backups.html"/> 
 
   
@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                2.1
+                2.2
               </div>
             
           
@@ -96,30 +96,31 @@
 <li class="toctree-l1"><a class="reference internal" href="api.html">API v2.0</a></li>
 <li class="toctree-l1"><a class="reference internal" href="low_level_methods.html">Low-level methods</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">PyIcepPAP console application</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Named Arguments">Named Arguments</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Sub-commands:">Sub-commands:</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#save">save</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Positional Arguments">Positional Arguments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Named Arguments">Named Arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Named Arguments_repeat1">Named Arguments</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#check">check</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Positional Arguments_repeat1">Positional Arguments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Named Arguments_repeat1">Named Arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Named Arguments_repeat2">Named Arguments</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#update">update</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Positional Arguments_repeat2">Positional Arguments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Named Arguments_repeat2">Named Arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Named Arguments_repeat3">Named Arguments</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#autofix">autofix</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Positional Arguments_repeat3">Positional Arguments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Named Arguments_repeat3">Named Arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Named Arguments_repeat4">Named Arguments</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#send">send</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#Positional Arguments_repeat4">Positional Arguments</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#Named Arguments_repeat4">Named Arguments</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Named Arguments_repeat5">Named Arguments</a></li>
 </ul>
 </li>
 </ul>
@@ -191,14 +192,28 @@
             
   <div class="section" id="pyiceppap-console-application">
 <h1>PyIcepPAP console application<a class="headerlink" href="#pyiceppap-console-application" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">pyIcePAP</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">{</span><span class="n">save</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">autofix</span><span class="p">,</span><span class="n">send</span><span class="p">}</span> <span class="o">...</span>
+<p>IcePAP scripts, base on ethernet communication
+Version: 2.2.0.</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">usage</span><span class="p">:</span> <span class="n">pyIcePAP</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">version</span><span class="p">]</span> <span class="p">{</span><span class="n">save</span><span class="p">,</span><span class="n">check</span><span class="p">,</span><span class="n">update</span><span class="p">,</span><span class="n">autofix</span><span class="p">,</span><span class="n">send</span><span class="p">}</span> <span class="o">...</span>
 </pre></div>
+</div>
+<div class="section" id="Named Arguments">
+<h2>Named Arguments<a class="headerlink" href="#Named Arguments" title="Permalink to this headline">¶</a></h2>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd>--version</kbd></td>
+<td>show program’s version number and exit</td></tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="Sub-commands:">
 <h2>Sub-commands:<a class="headerlink" href="#Sub-commands:" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="save">
 <h3>save<a class="headerlink" href="#save" title="Permalink to this headline">¶</a></h3>
-<p>Command to save the configuration to a file</p>
+<p>Save the configuration to a file</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pyIcePAP</span> <span class="n">save</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span> <span class="n">PORT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">TIMEOUT</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">bkpfile</span> <span class="n">BKPFILE</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span><span class="p">]</span>
               <span class="n">host</span> <span class="p">[</span><span class="n">axes</span> <span class="p">[</span><span class="n">axes</span> <span class="o">...</span><span class="p">]]</span>
 </pre></div>
@@ -220,8 +235,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="Named Arguments">
-<h4>Named Arguments<a class="headerlink" href="#Named Arguments" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="Named Arguments_repeat1">
+<h4>Named Arguments<a class="headerlink" href="#Named Arguments_repeat1" title="Permalink to this headline">¶</a></h4>
 <table class="docutils option-list" frame="void" rules="none">
 <col class="option" />
 <col class="description" />
@@ -252,7 +267,7 @@
 </div>
 <div class="section" id="check">
 <h3>check<a class="headerlink" href="#check" title="Permalink to this headline">¶</a></h3>
-<p>Command to check the IcePAP configuration for a backup file</p>
+<p>Check the IcePAP configuration for a backup file</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pyIcePAP</span> <span class="n">check</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">host</span> <span class="n">HOST</span><span class="p">]</span> <span class="n">filename</span> <span class="p">[</span><span class="n">axes</span> <span class="p">[</span><span class="n">axes</span> <span class="o">...</span><span class="p">]]</span>
 </pre></div>
 </div>
@@ -273,8 +288,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="Named Arguments_repeat1">
-<h4>Named Arguments<a class="headerlink" href="#Named Arguments_repeat1" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="Named Arguments_repeat2">
+<h4>Named Arguments<a class="headerlink" href="#Named Arguments_repeat2" title="Permalink to this headline">¶</a></h4>
 <table class="docutils option-list" frame="void" rules="none">
 <col class="option" />
 <col class="description" />
@@ -295,7 +310,7 @@
 </div>
 <div class="section" id="update">
 <h3>update<a class="headerlink" href="#update" title="Permalink to this headline">¶</a></h3>
-<p>Command to change the firmware version. It creates a backup before to change the FW</p>
+<p>Change the firmware version. It creates a backup before to change the FW</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pyIcePAP</span> <span class="n">update</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span> <span class="n">PORT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">TIMEOUT</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">bkpfile</span> <span class="n">BKPFILE</span><span class="p">]</span>
                 <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">check</span> <span class="n">NOCHECK</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span><span class="p">]</span>
                 <span class="n">host</span> <span class="n">fwfile</span>
@@ -313,62 +328,6 @@
 <tr><td class="option-group">
 <kbd>fwfile</kbd></td>
 <td>Firmware binary file</td></tr>
-</tbody>
-</table>
-</div>
-<div class="section" id="Named Arguments_repeat2">
-<h4>Named Arguments<a class="headerlink" href="#Named Arguments_repeat2" title="Permalink to this headline">¶</a></h4>
-<table class="docutils option-list" frame="void" rules="none">
-<col class="option" />
-<col class="description" />
-<tbody valign="top">
-<tr><td class="option-group">
-<kbd>-p, --port</kbd></td>
-<td><p class="first">IcePAP port</p>
-<p class="last">Default: 5000</p>
-</td></tr>
-<tr><td class="option-group">
-<kbd>-t, --timeout</kbd></td>
-<td><p class="first">Socket timeout</p>
-<p class="last">Default: 3</p>
-</td></tr>
-<tr><td class="option-group">
-<kbd>--bkpfile</kbd></td>
-<td><p class="first">Output backup filename</p>
-<p class="last">Default: “”</p>
-</td></tr>
-<tr><td class="option-group">
-<kbd>--no-check</kbd></td>
-<td>Avoid the checking procedure after the update</td></tr>
-<tr><td class="option-group">
-<kbd>-d, --debug</kbd></td>
-<td><p class="first">Activate log level DEBUG</p>
-<p class="last">Default: False</p>
-</td></tr>
-</tbody>
-</table>
-</div>
-</div>
-<div class="section" id="autofix">
-<h3>autofix<a class="headerlink" href="#autofix" title="Permalink to this headline">¶</a></h3>
-<p>Command to autofix a driver configuration</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pyIcePAP</span> <span class="n">autofix</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span> <span class="n">PORT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">TIMEOUT</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">bkpfile</span> <span class="n">BKPFILE</span><span class="p">]</span>
-                 <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">check</span> <span class="n">NOCHECK</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span><span class="p">]</span>
-                 <span class="n">host</span> <span class="n">loadfile</span>
-</pre></div>
-</div>
-<div class="section" id="Positional Arguments_repeat3">
-<h4>Positional Arguments<a class="headerlink" href="#Positional Arguments_repeat3" title="Permalink to this headline">¶</a></h4>
-<table class="docutils option-list" frame="void" rules="none">
-<col class="option" />
-<col class="description" />
-<tbody valign="top">
-<tr><td class="option-group">
-<kbd>host</kbd></td>
-<td>IcePAP Host</td></tr>
-<tr><td class="option-group">
-<kbd>loadfile</kbd></td>
-<td>backup to load</td></tr>
 </tbody>
 </table>
 </div>
@@ -405,9 +364,65 @@
 </table>
 </div>
 </div>
+<div class="section" id="autofix">
+<h3>autofix<a class="headerlink" href="#autofix" title="Permalink to this headline">¶</a></h3>
+<p>Autofix a driver configuration</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pyIcePAP</span> <span class="n">autofix</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span> <span class="n">PORT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">TIMEOUT</span><span class="p">]</span> <span class="p">[</span><span class="o">--</span><span class="n">bkpfile</span> <span class="n">BKPFILE</span><span class="p">]</span>
+                 <span class="p">[</span><span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">check</span> <span class="n">NOCHECK</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span><span class="p">]</span>
+                 <span class="n">host</span> <span class="n">loadfile</span>
+</pre></div>
+</div>
+<div class="section" id="Positional Arguments_repeat3">
+<h4>Positional Arguments<a class="headerlink" href="#Positional Arguments_repeat3" title="Permalink to this headline">¶</a></h4>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd>host</kbd></td>
+<td>IcePAP Host</td></tr>
+<tr><td class="option-group">
+<kbd>loadfile</kbd></td>
+<td>backup to load</td></tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="Named Arguments_repeat4">
+<h4>Named Arguments<a class="headerlink" href="#Named Arguments_repeat4" title="Permalink to this headline">¶</a></h4>
+<table class="docutils option-list" frame="void" rules="none">
+<col class="option" />
+<col class="description" />
+<tbody valign="top">
+<tr><td class="option-group">
+<kbd>-p, --port</kbd></td>
+<td><p class="first">IcePAP port</p>
+<p class="last">Default: 5000</p>
+</td></tr>
+<tr><td class="option-group">
+<kbd>-t, --timeout</kbd></td>
+<td><p class="first">Socket timeout</p>
+<p class="last">Default: 3</p>
+</td></tr>
+<tr><td class="option-group">
+<kbd>--bkpfile</kbd></td>
+<td><p class="first">Output backup filename</p>
+<p class="last">Default: “”</p>
+</td></tr>
+<tr><td class="option-group">
+<kbd>--no-check</kbd></td>
+<td>Avoid the checking procedure after the update</td></tr>
+<tr><td class="option-group">
+<kbd>-d, --debug</kbd></td>
+<td><p class="first">Activate log level DEBUG</p>
+<p class="last">Default: False</p>
+</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 <div class="section" id="send">
 <h3>send<a class="headerlink" href="#send" title="Permalink to this headline">¶</a></h3>
-<p>Command to send IcePAP raw commands</p>
+<p>Send IcePAP raw commands</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">pyIcePAP</span> <span class="n">send</span> <span class="p">[</span><span class="o">-</span><span class="n">h</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">p</span> <span class="n">PORT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">t</span> <span class="n">TIMEOUT</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">d</span><span class="p">]</span> <span class="n">host</span> <span class="n">command</span>
 </pre></div>
 </div>
@@ -426,8 +441,8 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="Named Arguments_repeat4">
-<h4>Named Arguments<a class="headerlink" href="#Named Arguments_repeat4" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="Named Arguments_repeat5">
+<h4>Named Arguments<a class="headerlink" href="#Named Arguments_repeat5" title="Permalink to this headline">¶</a></h4>
 <table class="docutils option-list" frame="void" rules="none">
 <col class="option" />
 <col class="description" />
@@ -452,6 +467,8 @@
 </div>
 </div>
 </div>
+<p>Documentation: <a class="reference external" href="https://alba-synchrotron.github.io/pyIcePAP-doc/">https://alba-synchrotron.github.io/pyIcePAP-doc/</a>
+Copyright 2008-2017 CELLS / ALBA Synchrotron, Bellaterra, Spain.</p>
 </div>
 
 
@@ -496,7 +513,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.1.1',
+            VERSION:'2.2.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
