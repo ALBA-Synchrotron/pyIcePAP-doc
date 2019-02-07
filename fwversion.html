@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Firmware version &mdash; pyIcePAP 2.2.0 documentation</title>
+  <title>Firmware version &mdash; pyIcePAP 2.7.0 documentation</title>
   
 
   
@@ -24,28 +24,19 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pyIcePAP 2.2.0 documentation" href="index.html"/>
-        <link rel="up" title="API v2.0" href="api.html"/>
-        <link rel="next" title="Utils" href="utils.html"/>
-        <link rel="prev" title="Axis layer" href="axis.html"/> 
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Utils" href="utils.html" />
+    <link rel="prev" title="Axis layer" href="axis.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -62,7 +53,7 @@
 
           
             
-            <img src="_static/ALBALogo_WHITE.png" class="logo" />
+            <img src="_static/ALBALogo_WHITE.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -70,7 +61,7 @@
             
             
               <div class="version">
-                2.2
+                2.7
               </div>
             
           
@@ -117,7 +108,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pyIcePAP</a>
@@ -125,9 +116,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -177,7 +169,7 @@
 <dt id="pyIcePAP.fwversion.FirmwareVersion">
 <em class="property">class </em><code class="descclassname">pyIcePAP.fwversion.</code><code class="descname">FirmwareVersion</code><span class="sig-paren">(</span><em>data</em>, <em>is_axis=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class to manage the different version numbers for the different components
-of the IcePAP system.</p>
+of the IcePAP system. A negative value means an error on the data.</p>
 <dl class="attribute">
 <dt id="pyIcePAP.fwversion.FirmwareVersion.ctrl">
 <code class="descname">ctrl</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.ctrl" title="Permalink to this definition">¶</a></dt>
@@ -304,6 +296,20 @@ of the IcePAP system.</p>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pyIcePAP.fwversion.FirmwareVersion.driver_pcb">
+<code class="descname">driver_pcb</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.driver_pcb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns driver PCB version.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(float, str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="method">
 <dt id="pyIcePAP.fwversion.FirmwareVersion.is_supported">
 <code class="descname">is_supported</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.is_supported" title="Permalink to this definition">¶</a></dt>
@@ -338,9 +344,7 @@ of the IcePAP system.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -362,7 +366,7 @@ of the IcePAP system.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -380,7 +384,8 @@ of the IcePAP system.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.2.0',
+            VERSION:'2.7.0',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -390,22 +395,17 @@ of the IcePAP system.</p>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

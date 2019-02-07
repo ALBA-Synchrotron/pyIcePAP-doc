@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Axis layer &mdash; pyIcePAP 2.2.0 documentation</title>
+  <title>Axis layer &mdash; pyIcePAP 2.7.0 documentation</title>
   
 
   
@@ -24,28 +24,19 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="pyIcePAP 2.2.0 documentation" href="index.html"/>
-        <link rel="up" title="API v2.0" href="api.html"/>
-        <link rel="next" title="Firmware version" href="fwversion.html"/>
-        <link rel="prev" title="Controller layer" href="controller.html"/> 
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Firmware version" href="fwversion.html" />
+    <link rel="prev" title="Controller layer" href="controller.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -62,7 +53,7 @@
 
           
             
-            <img src="_static/ALBALogo_WHITE.png" class="logo" />
+            <img src="_static/ALBALogo_WHITE.png" class="logo" alt="Logo"/>
           
           </a>
 
@@ -70,7 +61,7 @@
             
             
               <div class="version">
-                2.2
+                2.7
               </div>
             
           
@@ -117,7 +108,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">pyIcePAP</a>
@@ -125,9 +116,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -610,8 +602,8 @@ pag. 68).</p>
 <dl class="method">
 <dt id="pyIcePAP.axis.IcePAPAxis.get_home_encoder">
 <code class="descname">get_home_encoder</code><span class="sig-paren">(</span><em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_home_encoder" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the value latched on encoder register (IcePAP user manual
-pag. 77)</p>
+<dd><p>Return the home value latched on encoder register.
+(IcePAP user manual page 82, v1.0c).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -627,8 +619,8 @@ pag. 77)</p>
 <dl class="method">
 <dt id="pyIcePAP.axis.IcePAPAxis.get_home_position">
 <code class="descname">get_home_position</code><span class="sig-paren">(</span><em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_home_position" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the value latched on the position register (IcePAP user manual
-pag. 78).</p>
+<dd><p>Return the home value latched on the position register.
+(IcePAP user manual page 83, v1.0c).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -691,6 +683,40 @@ pag. 78).</p>
 <dt id="pyIcePAP.axis.IcePAPAxis.get_pos">
 <code class="descname">get_pos</code><span class="sig-paren">(</span><em>register</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read the position register in axis units (IcePAP user manual pag. 108).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>register</strong> – str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_srch_encoder">
+<code class="descname">get_srch_encoder</code><span class="sig-paren">(</span><em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_srch_encoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the search value latched on encoder register.
+(IcePAP user manual page 130, v1.0c).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>register</strong> – str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">long</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.get_srch_position">
+<code class="descname">get_srch_position</code><span class="sig-paren">(</span><em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.get_srch_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the search value latched on the position register.
+(IcePAP user manual page 131, v1.0c).</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -1429,11 +1455,12 @@ errors (IcePAP user manual pag. 110).</p>
 <code class="descname">set_cfg</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_cfg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the configuration of a parameter or change to Default/Expert
 configuration (IcePAP user manual pag. 54).</p>
+<p>set_cfg(‘Active’, ‘YES’, ‘NVOLT’, ‘48’,…)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> – List of arguments: (parameter, value) or (‘Default’)</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> – str: parameter, value or (‘Default’)</td>
 </tr>
 </tbody>
 </table>
@@ -1513,7 +1540,7 @@ is ON (IcePAP user manual pag. 65).</p>
 
 <dl class="method">
 <dt id="pyIcePAP.axis.IcePAPAxis.set_parametric_table">
-<code class="descname">set_parametric_table</code><span class="sig-paren">(</span><em>lparam</em>, <em>lpos</em>, <em>lslope=None</em>, <em>mode='SPLINE'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_parametric_table" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_parametric_table</code><span class="sig-paren">(</span><em>lparam</em>, <em>lpos</em>, <em>lslope=None</em>, <em>mode='SPLINE'</em>, <em>param_type='FLOAT'</em>, <em>pos_type='DWORD'</em>, <em>slope_type='FLOAT'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.set_parametric_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to set the parametric trajectory data (IcePAP user manual
 pag. 100).</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -1522,9 +1549,12 @@ pag. 100).</p>
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>lparam</strong> – [float]</li>
-<li><strong>lpos</strong> – [float]</li>
+<li><strong>lpos</strong> – [long]</li>
 <li><strong>lslope</strong> – [float]</li>
 <li><strong>mode</strong> – str [Linear, Spline, Cyclic]’</li>
+<li><strong>param_type</strong> – str (Global Definitions in pyIcePAP.vdatalib)</li>
+<li><strong>pos_type</strong> – str (Global Definitions in pyIcePAP.vdatalib)</li>
+<li><strong>slope_type</strong> – str (Global Definitions in pyIcePAP.vdatalib)</li>
 </ul>
 </td>
 </tr>
@@ -1561,6 +1591,41 @@ pag. 100).</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> – float</td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">float [steps per second]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="pyIcePAP.axis.IcePAPAxis.srch">
+<code class="descname">srch</code><span class="sig-paren">(</span><em>signal</em>, <em>edge_type</em>, <em>direction</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.srch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start search sequence.
+(IcePAP user manual page 129, v1.0c).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>signal</strong> – str [‘LIM-‘, ‘LIM+’, ‘HOME’, ‘ENCAUX’, ‘INPAUX’]</li>
+<li><strong>edge_type</strong> – str [‘POSEDGE’, ‘NEGEDGE’]</li>
+<li><strong>direction</strong> – int [-1, 1]</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pyIcePAP.axis.IcePAPAxis.srchstat">
+<code class="descname">srchstat</code><a class="headerlink" href="#pyIcePAP.axis.IcePAPAxis.srchstat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the homing procedure status.
+(IcePAP user manual page 132, v1.0c).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">[str(state), int(direction)]</td>
 </tr>
 </tbody>
 </table>
@@ -2147,9 +2212,7 @@ manual pag. 150).</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -2171,7 +2234,7 @@ manual pag. 150).</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -2189,7 +2252,8 @@ manual pag. 150).</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'2.2.0',
+            VERSION:'2.7.0',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -2199,22 +2263,17 @@ manual pag. 150).</p>
       <script type="text/javascript" src="_static/jquery.js"></script>
       <script type="text/javascript" src="_static/underscore.js"></script>
       <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
