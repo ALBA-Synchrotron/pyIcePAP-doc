@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Firmware version &mdash; pyIcePAP 2.7.0 documentation</title>
+  <title>Firmware version &mdash; icepap 3.0.0 documentation</title>
   
 
   
@@ -17,38 +17,40 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Utils" href="utils.html" />
     <link rel="prev" title="Axis layer" href="axis.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="index.html" class="icon icon-home"> pyIcePAP
+            <a href="index.html" class="icon icon-home"> icepap
           
 
           
@@ -61,7 +63,7 @@
             
             
               <div class="version">
-                2.7
+                3.0
               </div>
             
           
@@ -86,17 +88,16 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="api.html">API v2.0</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">API v3.0</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="communication.html">Communication layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="controller.html">Controller layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="axis.html">Axis layer</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Firmware version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.html">Utils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="legacy.html">Legacy</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="low_level_methods.html">Low-level methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="applications.html">PyIcepPAP console application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">IcepPAP console application</a></li>
 </ul>
 
             
@@ -111,7 +112,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pyIcePAP</a>
+          <a href="index.html">icepap</a>
         
       </nav>
 
@@ -142,7 +143,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="api.html">API v2.0</a> &raquo;</li>
+          <li><a href="api.html">API v3.0</a> &raquo;</li>
         
       <li>Firmware version</li>
     
@@ -163,179 +164,143 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-pyIcePAP.fwversion">
-<span id="firmware-version"></span><h1>Firmware version<a class="headerlink" href="#module-pyIcePAP.fwversion" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-icepap.fwversion">
+<span id="firmware-version"></span><h1>Firmware version<a class="headerlink" href="#module-icepap.fwversion" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pyIcePAP.fwversion.FirmwareVersion">
-<em class="property">class </em><code class="descclassname">pyIcePAP.fwversion.</code><code class="descname">FirmwareVersion</code><span class="sig-paren">(</span><em>data</em>, <em>is_axis=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.fwversion.FirmwareVersion">
+<em class="property">class </em><code class="sig-prename descclassname">icepap.fwversion.</code><code class="sig-name descname">FirmwareVersion</code><span class="sig-paren">(</span><em class="sig-param">data</em>, <em class="sig-param">is_axis=False</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.fwversion.FirmwareVersion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class to manage the different version numbers for the different components
 of the IcePAP system. A negative value means an error on the data.</p>
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.ctrl">
-<code class="descname">ctrl</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.ctrl" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.ctrl">
+<em class="property">property </em><code class="sig-name descname">ctrl</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.ctrl" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns controller version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.ctrl_dsp">
-<code class="descname">ctrl_dsp</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.ctrl_dsp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns Controller DSP version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.ctrl_fpga">
-<code class="descname">ctrl_fpga</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.ctrl_fpga" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns Controller FPGA version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.ctrl_mcpu0">
-<code class="descname">ctrl_mcpu0</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.ctrl_mcpu0" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns MCPU0 version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.ctrl_mcpu1">
-<code class="descname">ctrl_mcpu1</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.ctrl_mcpu1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns MCPU1 version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.ctrl_mcpu2">
-<code class="descname">ctrl_mcpu2</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.ctrl_mcpu2" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns MCPU2 version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.driver">
-<code class="descname">driver</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.driver" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns driver version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.driver_dsp">
-<code class="descname">driver_dsp</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.driver_dsp" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns driver DSP version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.driver_fpga">
-<code class="descname">driver_fpga</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.driver_fpga" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns driver FPGS version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.driver_pcb">
-<code class="descname">driver_pcb</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.driver_pcb" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns driver PCB version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">(float, str)</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.is_supported">
-<code class="descname">is_supported</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.is_supported" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns is the system configuration is one of the supported versions.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dt id="icepap.fwversion.FirmwareVersion.ctrl_dsp">
+<em class="property">property </em><code class="sig-name descname">ctrl_dsp</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.ctrl_dsp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Controller DSP version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pyIcePAP.fwversion.FirmwareVersion.system">
-<code class="descname">system</code><a class="headerlink" href="#pyIcePAP.fwversion.FirmwareVersion.system" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.ctrl_fpga">
+<em class="property">property </em><code class="sig-name descname">ctrl_fpga</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.ctrl_fpga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns Controller FPGA version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.ctrl_mcpu0">
+<em class="property">property </em><code class="sig-name descname">ctrl_mcpu0</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.ctrl_mcpu0" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns MCPU0 version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.ctrl_mcpu1">
+<em class="property">property </em><code class="sig-name descname">ctrl_mcpu1</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.ctrl_mcpu1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns MCPU1 version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.ctrl_mcpu2">
+<em class="property">property </em><code class="sig-name descname">ctrl_mcpu2</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.ctrl_mcpu2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns MCPU2 version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.driver">
+<em class="property">property </em><code class="sig-name descname">driver</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.driver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns driver version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.driver_dsp">
+<em class="property">property </em><code class="sig-name descname">driver_dsp</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.driver_dsp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns driver DSP version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.driver_fpga">
+<em class="property">property </em><code class="sig-name descname">driver_fpga</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.driver_fpga" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns driver FPGS version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.driver_pcb">
+<em class="property">property </em><code class="sig-name descname">driver_pcb</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.driver_pcb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns driver PCB version.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(float, str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.is_supported">
+<code class="sig-name descname">is_supported</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.is_supported" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns is the system configuration is one of the supported versions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.fwversion.FirmwareVersion.system">
+<em class="property">property </em><code class="sig-name descname">system</code><a class="headerlink" href="#icepap.fwversion.FirmwareVersion.system" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns system version.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -353,7 +318,7 @@ of the IcePAP system. A negative value means an error on the data.</p>
         <a href="utils.html" class="btn btn-neutral float-right" title="Utils" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="axis.html" class="btn btn-neutral" title="Axis layer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="axis.html" class="btn btn-neutral float-left" title="Axis layer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -362,7 +327,7 @@ of the IcePAP system. A negative value means an error on the data.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright Copyright 2008-2017 CELLS / ALBA Synchrotron, Bellaterra, Spain.
+        &copy; Copyright Copyright 2008-2017 CELLS / ALBA Synchrotron, Bellaterra, Spain
 
     </p>
   </div>
@@ -379,33 +344,16 @@ of the IcePAP system. A negative value means an error on the data.</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2.7.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

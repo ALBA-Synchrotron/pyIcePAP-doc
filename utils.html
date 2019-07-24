@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Utils &mdash; pyIcePAP 2.7.0 documentation</title>
+  <title>Utils &mdash; icepap 3.0.0 documentation</title>
   
 
   
@@ -17,38 +17,40 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Legacy" href="legacy.html" />
+    <link rel="next" title="Low-level methods" href="low_level_methods.html" />
     <link rel="prev" title="Firmware version" href="fwversion.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="index.html" class="icon icon-home"> pyIcePAP
+            <a href="index.html" class="icon icon-home"> icepap
           
 
           
@@ -61,7 +63,7 @@
             
             
               <div class="version">
-                2.7
+                3.0
               </div>
             
           
@@ -86,17 +88,16 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="api.html">API v2.0</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">API v3.0</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="communication.html">Communication layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="controller.html">Controller layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="axis.html">Axis layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fwversion.html">Firmware version</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Utils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="legacy.html">Legacy</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="low_level_methods.html">Low-level methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="applications.html">PyIcepPAP console application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">IcepPAP console application</a></li>
 </ul>
 
             
@@ -111,7 +112,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pyIcePAP</a>
+          <a href="index.html">icepap</a>
         
       </nav>
 
@@ -142,7 +143,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="api.html">API v2.0</a> &raquo;</li>
+          <li><a href="api.html">API v3.0</a> &raquo;</li>
         
       <li>Utils</li>
     
@@ -163,90 +164,90 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-pyIcePAP.utils">
-<span id="utils"></span><h1>Utils<a class="headerlink" href="#module-pyIcePAP.utils" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-icepap.utils">
+<span id="utils"></span><h1>Utils<a class="headerlink" href="#module-icepap.utils" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pyIcePAP.utils.Info">
-<em class="property">class </em><code class="descclassname">pyIcePAP.utils.</code><code class="descname">Info</code><a class="headerlink" href="#pyIcePAP.utils.Info" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.Info">
+<em class="property">class </em><code class="sig-prename descclassname">icepap.utils.</code><code class="sig-name descname">Info</code><a class="headerlink" href="#icepap.utils.Info" title="Permalink to this definition">¶</a></dt>
 <dd><p>Icepap general namespace values.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pyIcePAP.utils.Registers">
-<em class="property">class </em><code class="descclassname">pyIcePAP.utils.</code><code class="descname">Registers</code><a class="headerlink" href="#pyIcePAP.utils.Registers" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.Registers">
+<em class="property">class </em><code class="sig-prename descclassname">icepap.utils.</code><code class="sig-name descname">Registers</code><a class="headerlink" href="#icepap.utils.Registers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Icepap register namespace values.</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pyIcePAP.utils.State">
-<em class="property">class </em><code class="descclassname">pyIcePAP.utils.</code><code class="descname">State</code><span class="sig-paren">(</span><em>status_register</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State">
+<em class="property">class </em><code class="sig-prename descclassname">icepap.utils.</code><code class="sig-name descname">State</code><span class="sig-paren">(</span><em class="sig-param">status_register</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State" title="Permalink to this definition">¶</a></dt>
 <dd><p>Class to evaluate the status register.</p>
 <p>Table from Icepap User Manual - Section <cite>Board Status Register</cite></p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="14%" />
-<col width="17%" />
-<col width="68%" />
+<col style="width: 14%" />
+<col style="width: 17%" />
+<col style="width: 68%" />
 </colgroup>
-<tbody valign="top">
-<tr class="row-odd"><td>0</td>
-<td>PRESENT</td>
-<td>1 = driver present</td>
+<tbody>
+<tr class="row-odd"><td><p>0</p></td>
+<td><p>PRESENT</p></td>
+<td><p>1 = driver present</p></td>
 </tr>
-<tr class="row-even"><td>1</td>
-<td>ALIVE</td>
-<td>1 = board responsive</td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>ALIVE</p></td>
+<td><p>1 = board responsive</p></td>
 </tr>
-<tr class="row-odd"><td>2-3</td>
-<td>MODE</td>
-<td>0 = OPER,
+<tr class="row-odd"><td><p>2-3</p></td>
+<td><p>MODE</p></td>
+<td><p>0 = OPER,
 1 = PROG,
 2 = TEST,
-3 = FAIL.</td>
+3 = FAIL.</p></td>
 </tr>
-<tr class="row-even"><td>4-6</td>
-<td>DISABLE</td>
-<td><p class="first">0 = enable</p>
+<tr class="row-even"><td><p>4-6</p></td>
+<td><p>DISABLE</p></td>
+<td><p>0 = enable</p>
 <p>1 = axis not active</p>
 <p>2 = hardware alarm</p>
 <p>3 = remote rack disable input signal</p>
 <p>4 = local rack disable switch</p>
 <p>5 = remote axis disable input signal</p>
 <p>6 = local axis disable switch</p>
-<p class="last">7 = software disable.</p>
+<p>7 = software disable.</p>
 </td>
 </tr>
-<tr class="row-odd"><td>7-8</td>
-<td>INDEXER</td>
-<td><p class="first">0 = internal indexer</p>
+<tr class="row-odd"><td><p>7-8</p></td>
+<td><p>INDEXER</p></td>
+<td><p>0 = internal indexer</p>
 <p>1 = in-system indexer</p>
 <p>2 = external indexer</p>
-<p class="last">3 = n/a.</p>
+<p>3 = n/a.</p>
 </td>
 </tr>
-<tr class="row-even"><td>9</td>
-<td>READY</td>
-<td>1 = ready to move</td>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>READY</p></td>
+<td><p>1 = ready to move</p></td>
 </tr>
-<tr class="row-odd"><td>10</td>
-<td>MOVING</td>
-<td>1 = axis moving</td>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>MOVING</p></td>
+<td><p>1 = axis moving</p></td>
 </tr>
-<tr class="row-even"><td>11</td>
-<td>SETTLING</td>
-<td>1 = closed loop in settling phase</td>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>SETTLING</p></td>
+<td><p>1 = closed loop in settling phase</p></td>
 </tr>
-<tr class="row-odd"><td>12</td>
-<td>OUTOFWIN</td>
-<td>1 = axis out of settling window</td>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>OUTOFWIN</p></td>
+<td><p>1 = axis out of settling window</p></td>
 </tr>
-<tr class="row-even"><td>13</td>
-<td>WARNING</td>
-<td>1 = warning condition</td>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>WARNING</p></td>
+<td><p>1 = warning condition</p></td>
 </tr>
-<tr class="row-odd"><td>14-17</td>
-<td>STOPCODE</td>
-<td><p class="first">0 = end of movement</p>
+<tr class="row-odd"><td><p>14-17</p></td>
+<td><p>STOPCODE</p></td>
+<td><p>0 = end of movement</p>
 <p>1 = Stop</p>
 <p>2 = Abort</p>
 <p>3 = Limit+ reached</p>
@@ -261,387 +262,326 @@
 <p>12 = Close loop error</p>
 <p>13 = Control encoder error</p>
 <p>14 = n/a</p>
-<p class="last">15 = External alarm.</p>
+<p>15 = External alarm.</p>
 </td>
 </tr>
-<tr class="row-even"><td>18</td>
-<td>LIMIT+</td>
-<td>current value of the limit+ signal</td>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>LIMIT+</p></td>
+<td><p>current value of the limit+ signal</p></td>
 </tr>
-<tr class="row-odd"><td>19</td>
-<td>LIMIT-</td>
-<td>current value of the limit- signal</td>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>LIMIT-</p></td>
+<td><p>current value of the limit- signal</p></td>
 </tr>
-<tr class="row-even"><td>20</td>
-<td>HOME</td>
-<td>1 = Home switch reached (only in homing modes)</td>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>HOME</p></td>
+<td><p>1 = Home switch reached (only in homing modes)</p></td>
 </tr>
-<tr class="row-odd"><td>21</td>
-<td>5VPOWER</td>
-<td>1 = Aux power supply on</td>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>5VPOWER</p></td>
+<td><p>1 = Aux power supply on</p></td>
 </tr>
-<tr class="row-even"><td>22</td>
-<td>VERSERR</td>
-<td>1 = inconsistency in firmware versions</td>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>VERSERR</p></td>
+<td><p>1 = inconsistency in firmware versions</p></td>
 </tr>
-<tr class="row-odd"><td>23</td>
-<td>n/a</td>
-<td>n/a</td>
+<tr class="row-odd"><td><p>23</p></td>
+<td><p>n/a</p></td>
+<td><p>n/a</p></td>
 </tr>
-<tr class="row-even"><td>24-31</td>
-<td>INFO</td>
-<td><p class="first">In PROG mode: programming phase</p>
-<p class="last">In OPER mode: master indexer</p>
+<tr class="row-even"><td><p>24-31</p></td>
+<td><p>INFO</p></td>
+<td><p>In PROG mode: programming phase</p>
+<p>In OPER mode: master indexer</p>
 </td>
 </tr>
 </tbody>
 </table>
 <dl class="method">
-<dt id="pyIcePAP.utils.State.get_disable_code">
-<code class="descname">get_disable_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.get_disable_code" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.get_disable_code">
+<code class="sig-name descname">get_disable_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.get_disable_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the disable code.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.get_disable_str">
-<code class="descname">get_disable_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.get_disable_str" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.get_disable_str">
+<code class="sig-name descname">get_disable_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.get_disable_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the disable string.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.get_indexer_code">
-<code class="descname">get_indexer_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.get_indexer_code" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.get_indexer_code">
+<code class="sig-name descname">get_indexer_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.get_indexer_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the indexer code.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.get_indexer_str">
-<code class="descname">get_indexer_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.get_indexer_str" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.get_indexer_str">
+<code class="sig-name descname">get_indexer_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.get_indexer_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get indexer string.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.get_info_code">
-<code class="descname">get_info_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.get_info_code" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.get_info_code">
+<code class="sig-name descname">get_info_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.get_info_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get programming phase or master indexer accoding to the IcePAP mode.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.get_mode_code">
-<code class="descname">get_mode_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.get_mode_code" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.get_mode_code">
+<code class="sig-name descname">get_mode_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.get_mode_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the current mode.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.get_mode_str">
-<code class="descname">get_mode_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.get_mode_str" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.get_mode_str">
+<code class="sig-name descname">get_mode_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.get_mode_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return mode (str)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.get_stop_code">
-<code class="descname">get_stop_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.get_stop_code" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.get_stop_code">
+<code class="sig-name descname">get_stop_code</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.get_stop_code" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the stop code.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">int</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.get_stop_str">
-<code class="descname">get_stop_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.get_stop_str" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.get_stop_str">
+<code class="sig-name descname">get_stop_str</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.get_stop_str" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the stop code string.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_5vpower">
-<code class="descname">is_5vpower</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_5vpower" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_5vpower">
+<code class="sig-name descname">is_5vpower</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_5vpower" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the 5v auxiliary power is ON.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_alive">
-<code class="descname">is_alive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_alive" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_alive">
+<code class="sig-name descname">is_alive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_alive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the driver is alive.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_disabled">
-<code class="descname">is_disabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_disabled" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_disabled">
+<code class="sig-name descname">is_disabled</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_disabled" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the driver is disable.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_inhome">
-<code class="descname">is_inhome</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_inhome" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_inhome">
+<code class="sig-name descname">is_inhome</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_inhome" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the home switch was reached.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_limit_negative">
-<code class="descname">is_limit_negative</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_limit_negative" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_limit_negative">
+<code class="sig-name descname">is_limit_negative</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_limit_negative" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the driver is touching the positive limit.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_limit_positive">
-<code class="descname">is_limit_positive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_limit_positive" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_limit_positive">
+<code class="sig-name descname">is_limit_positive</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_limit_positive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the driver is touching the positive limit.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_moving">
-<code class="descname">is_moving</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_moving" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_moving">
+<code class="sig-name descname">is_moving</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_moving" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the driver is moving.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_outofwin">
-<code class="descname">is_outofwin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_outofwin" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_outofwin">
+<code class="sig-name descname">is_outofwin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_outofwin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the drive is out of the close loop window.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_poweron">
-<code class="descname">is_poweron</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_poweron" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_poweron">
+<code class="sig-name descname">is_poweron</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_poweron" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the driver is powered ON.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_present">
-<code class="descname">is_present</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_present" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_present">
+<code class="sig-name descname">is_present</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_present" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the driver is present.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_ready">
-<code class="descname">is_ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_ready" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_ready">
+<code class="sig-name descname">is_ready</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_ready" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the driver is ready.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_settling">
-<code class="descname">is_settling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_settling" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_settling">
+<code class="sig-name descname">is_settling</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_settling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the driver is settling.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_verserr">
-<code class="descname">is_verserr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_verserr" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_verserr">
+<code class="sig-name descname">is_verserr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_verserr" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if there is inconsistency in firmware versions.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.utils.State.is_warning">
-<code class="descname">is_warning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.utils.State.is_warning" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.State.is_warning">
+<code class="sig-name descname">is_warning</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.State.is_warning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if the driver is in warning.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="class">
-<dt id="pyIcePAP.utils.TrackMode">
-<em class="property">class </em><code class="descclassname">pyIcePAP.utils.</code><code class="descname">TrackMode</code><a class="headerlink" href="#pyIcePAP.utils.TrackMode" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.TrackMode">
+<em class="property">class </em><code class="sig-prename descclassname">icepap.utils.</code><code class="sig-name descname">TrackMode</code><a class="headerlink" href="#icepap.utils.TrackMode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Track modes (IcePAP user manual pag. 139).</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pyIcePAP.utils.Answers">
-<em class="property">class </em><code class="descclassname">pyIcePAP.utils.</code><code class="descname">Answers</code><a class="headerlink" href="#pyIcePAP.utils.Answers" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.Answers">
+<em class="property">class </em><code class="sig-prename descclassname">icepap.utils.</code><code class="sig-name descname">Answers</code><a class="headerlink" href="#icepap.utils.Answers" title="Permalink to this definition">¶</a></dt>
 <dd><p>Icepap answers values (str)</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pyIcePAP.utils.Mode">
-<em class="property">class </em><code class="descclassname">pyIcePAP.utils.</code><code class="descname">Mode</code><a class="headerlink" href="#pyIcePAP.utils.Mode" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.Mode">
+<em class="property">class </em><code class="sig-prename descclassname">icepap.utils.</code><code class="sig-name descname">Mode</code><a class="headerlink" href="#icepap.utils.Mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Icepap modes (IcePAP user manual pag. 22).</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="pyIcePAP.utils.EdgeType">
-<em class="property">class </em><code class="descclassname">pyIcePAP.utils.</code><code class="descname">EdgeType</code><a class="headerlink" href="#pyIcePAP.utils.EdgeType" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.utils.EdgeType">
+<em class="property">class </em><code class="sig-prename descclassname">icepap.utils.</code><code class="sig-name descname">EdgeType</code><a class="headerlink" href="#icepap.utils.EdgeType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Edge type used on search routines. IcePAP user manual pag. 124</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="icepap.utils.deprecated">
+<code class="sig-prename descclassname">icepap.utils.</code><code class="sig-name descname">deprecated</code><span class="sig-paren">(</span><em class="sig-param">alt=None</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.utils.deprecated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deprecation function (decorator) to mark future deprecated methods.
+&#64;param alt: Alternative command in the new API.
+&#64;return: decorated function with a deprecation message.</p>
 </dd></dl>
 
 </div>
@@ -654,10 +594,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="legacy.html" class="btn btn-neutral float-right" title="Legacy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="low_level_methods.html" class="btn btn-neutral float-right" title="Low-level methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="fwversion.html" class="btn btn-neutral" title="Firmware version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="fwversion.html" class="btn btn-neutral float-left" title="Firmware version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -666,7 +606,7 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright Copyright 2008-2017 CELLS / ALBA Synchrotron, Bellaterra, Spain.
+        &copy; Copyright Copyright 2008-2017 CELLS / ALBA Synchrotron, Bellaterra, Spain
 
     </p>
   </div>
@@ -683,33 +623,16 @@
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2.7.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Communication layer &mdash; pyIcePAP 2.7.0 documentation</title>
+  <title>Communication layer &mdash; icepap 3.0.0 documentation</title>
   
 
   
@@ -17,38 +17,40 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Controller layer" href="controller.html" />
-    <link rel="prev" title="API v2.0" href="api.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
+    <link rel="prev" title="API v3.0" href="api.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="index.html" class="icon icon-home"> pyIcePAP
+            <a href="index.html" class="icon icon-home"> icepap
           
 
           
@@ -61,7 +63,7 @@
             
             
               <div class="version">
-                2.7
+                3.0
               </div>
             
           
@@ -86,17 +88,16 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="api.html">API v2.0</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">API v3.0</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Communication layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="controller.html">Controller layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="axis.html">Axis layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fwversion.html">Firmware version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.html">Utils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="legacy.html">Legacy</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="low_level_methods.html">Low-level methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="applications.html">PyIcepPAP console application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">IcepPAP console application</a></li>
 </ul>
 
             
@@ -111,7 +112,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pyIcePAP</a>
+          <a href="index.html">icepap</a>
         
       </nav>
 
@@ -142,7 +143,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="api.html">API v2.0</a> &raquo;</li>
+          <li><a href="api.html">API v3.0</a> &raquo;</li>
         
       <li>Communication layer</li>
     
@@ -163,69 +164,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-pyIcePAP.communication">
-<span id="communication-layer"></span><h1>Communication layer<a class="headerlink" href="#module-pyIcePAP.communication" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-icepap.communication">
+<span id="communication-layer"></span><h1>Communication layer<a class="headerlink" href="#module-icepap.communication" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pyIcePAP.communication.EthIcePAPCommunication">
-<em class="property">class </em><code class="descclassname">pyIcePAP.communication.</code><code class="descname">EthIcePAPCommunication</code><span class="sig-paren">(</span><em>host</em>, <em>port=5000</em>, <em>timeout=3</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.communication.EthIcePAPCommunication" title="Permalink to this definition">¶</a></dt>
-<dd><p>Class implementating the socket communication layer for the Base Icepap
-motor controller class.</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="pyIcePAP.communication.IcePAPCommunication">
-<em class="property">class </em><code class="descclassname">pyIcePAP.communication.</code><code class="descname">IcePAPCommunication</code><span class="sig-paren">(</span><em>comm_type</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.communication.IcePAPCommunication" title="Permalink to this definition">¶</a></dt>
-<dd><p>This abstract class provides an abstraction of the communication layer
-for the IcePAP motion controller by defining a common API.</p>
+<dt id="icepap.communication.IcePAPCommunication">
+<em class="property">class </em><code class="sig-prename descclassname">icepap.communication.</code><code class="sig-name descname">IcePAPCommunication</code><span class="sig-paren">(</span><em class="sig-param">host</em>, <em class="sig-param">port=5000</em>, <em class="sig-param">timeout=3</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.communication.IcePAPCommunication" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class implementing the communication layer for IcePAP motion controller.
+It bases on the socket communication. For the Serial communication see
+manual.</p>
 <dl class="method">
-<dt id="pyIcePAP.communication.IcePAPCommunication.disconnect">
-<code class="descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.communication.IcePAPCommunication.disconnect" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.communication.IcePAPCommunication.disconnect">
+<code class="sig-name descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.communication.IcePAPCommunication.disconnect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to close the communication</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.communication.IcePAPCommunication.get_comm_type">
-<code class="descname">get_comm_type</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.communication.IcePAPCommunication.get_comm_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Returns the communication type implemented in the controller.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><cite>CommType</cite> object according to the communicationlayer defined.</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="pyIcePAP.communication.IcePAPCommunication.send_binary">
-<code class="descname">send_binary</code><span class="sig-paren">(</span><em>ushort_data</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.communication.IcePAPCommunication.send_binary" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.communication.IcePAPCommunication.send_binary">
+<code class="sig-name descname">send_binary</code><span class="sig-paren">(</span><em class="sig-param">ushort_data</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.communication.IcePAPCommunication.send_binary" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to send a binary data to the IcePAP controller.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>ushort_data</strong> – Data converted to a unsigned short list.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ushort_data</strong> – Data converted to a unsigned short list.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.communication.IcePAPCommunication.send_cmd">
-<code class="descname">send_cmd</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.communication.IcePAPCommunication.send_cmd" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.communication.IcePAPCommunication.send_cmd">
+<code class="sig-name descname">send_cmd</code><span class="sig-paren">(</span><em class="sig-param">cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.communication.IcePAPCommunication.send_cmd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to send commands to the IcePAP controller. It uses acknowledge
 communication (IcePAP User Manual pag. 37).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cmd</strong> – Command without acknowledge character and CR and/or LF.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None or list of string without the command and the CRLF.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cmd</strong> – Command without acknowledge character and CR and/or LF.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or list of string without the command and the CRLF.</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -243,7 +219,7 @@ communication (IcePAP User Manual pag. 37).</p>
         <a href="controller.html" class="btn btn-neutral float-right" title="Controller layer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="api.html" class="btn btn-neutral" title="API v2.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="api.html" class="btn btn-neutral float-left" title="API v3.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -252,7 +228,7 @@ communication (IcePAP User Manual pag. 37).</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright Copyright 2008-2017 CELLS / ALBA Synchrotron, Bellaterra, Spain.
+        &copy; Copyright Copyright 2008-2017 CELLS / ALBA Synchrotron, Bellaterra, Spain
 
     </p>
   </div>
@@ -269,33 +245,16 @@ communication (IcePAP User Manual pag. 37).</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2.7.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

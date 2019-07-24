@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Controller layer &mdash; pyIcePAP 2.7.0 documentation</title>
+  <title>Controller layer &mdash; icepap 3.0.0 documentation</title>
   
 
   
@@ -17,38 +17,40 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Axis layer" href="axis.html" />
     <link rel="prev" title="Communication layer" href="communication.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
-            <a href="index.html" class="icon icon-home"> pyIcePAP
+            <a href="index.html" class="icon icon-home"> icepap
           
 
           
@@ -61,7 +63,7 @@
             
             
               <div class="version">
-                2.7
+                3.0
               </div>
             
           
@@ -86,17 +88,16 @@
             
             
               <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="api.html">API v2.0</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="api.html">API v3.0</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="communication.html">Communication layer</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Controller layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="axis.html">Axis layer</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fwversion.html">Firmware version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="utils.html">Utils</a></li>
-<li class="toctree-l2"><a class="reference internal" href="legacy.html">Legacy</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="low_level_methods.html">Low-level methods</a></li>
-<li class="toctree-l1"><a class="reference internal" href="applications.html">PyIcepPAP console application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">IcepPAP console application</a></li>
 </ul>
 
             
@@ -111,7 +112,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pyIcePAP</a>
+          <a href="index.html">icepap</a>
         
       </nav>
 
@@ -142,7 +143,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="api.html">API v2.0</a> &raquo;</li>
+          <li><a href="api.html">API v3.0</a> &raquo;</li>
         
       <li>Controller layer</li>
     
@@ -163,710 +164,614 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="module-pyIcePAP.controller">
-<span id="controller-layer"></span><h1>Controller layer<a class="headerlink" href="#module-pyIcePAP.controller" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-icepap.controller">
+<span id="controller-layer"></span><h1>Controller layer<a class="headerlink" href="#module-icepap.controller" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
-<dt id="pyIcePAP.controller.EthIcePAPController">
-<em class="property">class </em><code class="descclassname">pyIcePAP.controller.</code><code class="descname">EthIcePAPController</code><span class="sig-paren">(</span><em>host</em>, <em>port=5000</em>, <em>timeout=3</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.EthIcePAPController" title="Permalink to this definition">¶</a></dt>
-<dd><p>This class implements the sockry communication layer for the IcePAP motor
-controller inhereted from IcePAPController class.</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="pyIcePAP.controller.IcePAPController">
-<em class="property">class </em><code class="descclassname">pyIcePAP.controller.</code><code class="descname">IcePAPController</code><span class="sig-paren">(</span><em>comm_type</em>, <em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController" title="Permalink to this definition">¶</a></dt>
-<dd><p>Base class for IcePAP motor controller.</p>
+<dt id="icepap.controller.IcePAPController">
+<em class="property">class </em><code class="sig-prename descclassname">icepap.controller.</code><code class="sig-name descname">IcePAPController</code><span class="sig-paren">(</span><em class="sig-param">host</em>, <em class="sig-param">port=5000</em>, <em class="sig-param">timeout=3</em>, <em class="sig-param">auto_axes=False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController" title="Permalink to this definition">¶</a></dt>
+<dd><p>IcePAP motor controller class.</p>
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.abort">
-<code class="descname">abort</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.abort" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.abort">
+<code class="sig-name descname">abort</code><span class="sig-paren">(</span><em class="sig-param">axes</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.abort" title="Permalink to this definition">¶</a></dt>
 <dd><p>Abort multiple axis movement (IcePAP user manual pag. 129).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.add_alias">
-<code class="descname">add_alias</code><span class="sig-paren">(</span><em>alias</em>, <em>axis</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.add_alias" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.add_alias">
+<code class="sig-name descname">add_alias</code><span class="sig-paren">(</span><em class="sig-param">alias</em>, <em class="sig-param">axis</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.add_alias" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set a alias for an axis. The axis can have more than one alias.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>alias</strong> – str</li>
-<li><strong>axis</strong> – int</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>alias</strong> – str</p></li>
+<li><p><strong>axis</strong> – int</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.add_aliases">
-<code class="descname">add_aliases</code><span class="sig-paren">(</span><em>aliases</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.add_aliases" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.add_aliases">
+<code class="sig-name descname">add_aliases</code><span class="sig-paren">(</span><em class="sig-param">aliases</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.add_aliases" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set alias for mutiple axes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>aliases</strong> – {str: int}</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>aliases</strong> – {str: int}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.add_pmux">
-<code class="descname">add_pmux</code><span class="sig-paren">(</span><em>source</em>, <em>dest=''</em>, <em>pos=True</em>, <em>aux=True</em>, <em>hard=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.add_pmux" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.add_pmux">
+<code class="sig-name descname">add_pmux</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">dest=''</em>, <em class="sig-param">pos=True</em>, <em class="sig-param">aux=True</em>, <em class="sig-param">hard=False</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.add_pmux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures a position signal multiplexer configuration (IcePAP user
 manual, page 107).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>source</strong> – Source node</li>
-<li><strong>dest</strong> – Target node</li>
-<li><strong>pos</strong> – Connect the Position signals</li>
-<li><strong>aux</strong> – Connect the Auxiliary signals</li>
-<li><strong>hard</strong> – Enabling/Disabling hard flag connection.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> – Source node</p></li>
+<li><p><strong>dest</strong> – Target node</p></li>
+<li><p><strong>pos</strong> – Connect the Position signals</p></li>
+<li><p><strong>aux</strong> – Connect the Auxiliary signals</p></li>
+<li><p><strong>hard</strong> – Enabling/Disabling hard flag connection.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.check_version">
-<code class="descname">check_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.check_version" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.axes">
+<em class="property">property </em><code class="sig-name descname">axes</code><a class="headerlink" href="#icepap.controller.IcePAPController.axes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the axes numbers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>[int]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.controller.IcePAPController.check_version">
+<code class="sig-name descname">check_version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.check_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Compares the current version installed with the supported
 versions specified in the versions module.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">system version number, -1 if not consistent.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>system version number, -1 if not consistent.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.clear_pmux">
-<code class="descname">clear_pmux</code><span class="sig-paren">(</span><em>dest=''</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.clear_pmux" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.clear_pmux">
+<code class="sig-name descname">clear_pmux</code><span class="sig-paren">(</span><em class="sig-param">dest=''</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.clear_pmux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Clear the multiplexer configuration. You can pass a destination with
 an optional signal or just the signals to remove (IcePAP user manual,
 page 107).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>dest</strong> – node to remove</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="attribute">
-<dt id="pyIcePAP.controller.IcePAPController.comm_type">
-<code class="descname">comm_type</code><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.comm_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the communication type for this controller.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">communication type</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>dest</strong> – node to remove</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.ctrlrst">
-<code class="descname">ctrlrst</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.ctrlrst" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.ctrlrst">
+<code class="sig-name descname">ctrlrst</code><span class="sig-paren">(</span><em class="sig-param">axes</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.ctrlrst" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset control position register for multiple axis.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.disconnect">
-<code class="descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.disconnect" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.disconnect">
+<code class="sig-name descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.disconnect" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method to close the communication with the IcePAP
 :return:</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.esync">
-<code class="descname">esync</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.esync" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.drivers">
+<em class="property">property </em><code class="sig-name descname">drivers</code><a class="headerlink" href="#icepap.controller.IcePAPController.drivers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the drivers IcePAPAxis objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>[IcePAPAxis]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.controller.IcePAPController.esync">
+<code class="sig-name descname">esync</code><span class="sig-paren">(</span><em class="sig-param">axes</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.esync" title="Permalink to this definition">¶</a></dt>
 <dd><p>Synchronize internal position register for multiple axis.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_acctime">
-<code class="descname">get_acctime</code><span class="sig-paren">(</span><em>axes</em>, <em>atype='NOMINAL'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_acctime" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_acctime">
+<code class="sig-name descname">get_acctime</code><span class="sig-paren">(</span><em class="sig-param">axes</em>, <em class="sig-param">atype='NOMINAL'</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_acctime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get multiple velocities (IcePAP user manual pag. 141).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[float]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[float]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_aliases">
-<code class="descname">get_aliases</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_aliases" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_aliases">
+<code class="sig-name descname">get_aliases</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_aliases" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the aliases of the system. One axis can have move than one alias.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">{int:[str]}</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>{int:[str]}</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_enc">
-<code class="descname">get_enc</code><span class="sig-paren">(</span><em>axes</em>, <em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_enc" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_enc">
+<code class="sig-name descname">get_enc</code><span class="sig-paren">(</span><em class="sig-param">axes</em>, <em class="sig-param">register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_enc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get multiple encoder.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>axes</strong> – [str/int]</li>
-<li><strong>register</strong> – str</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axes</strong> – [str/int]</p></li>
+<li><p><strong>register</strong> – str</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">[float]</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[float]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_fpos">
-<code class="descname">get_fpos</code><span class="sig-paren">(</span><em>axes</em>, <em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_fpos" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_fpos">
+<code class="sig-name descname">get_fpos</code><span class="sig-paren">(</span><em class="sig-param">axes</em>, <em class="sig-param">register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_fpos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fast read of multiple positions (IcePAP user manual pag. 73).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>axes</strong> – [str/int]</li>
-<li><strong>register</strong> – str</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axes</strong> – [str/int]</p></li>
+<li><p><strong>register</strong> – str</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">[float]</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[float]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_fstatus">
-<code class="descname">get_fstatus</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_fstatus" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_fstatus">
+<code class="sig-name descname">get_fstatus</code><span class="sig-paren">(</span><em class="sig-param">axes</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_fstatus" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fast read of multiple status (IcePAP user manual pag. 74).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[int]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[int]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_homestat">
-<code class="descname">get_homestat</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_homestat" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_homestat">
+<code class="sig-name descname">get_homestat</code><span class="sig-paren">(</span><em class="sig-param">axes</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_homestat" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get home search status.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[(str,int)] list of Status, Direction per motor</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[(str,int)] list of Status, Direction per motor</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_pmux">
-<code class="descname">get_pmux</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_pmux" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_pmux">
+<code class="sig-name descname">get_pmux</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_pmux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns a list of the current signals sources used as axis indexers
 (IcePAP user manual, page 107).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">list of multiplexer configurations.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>list of multiplexer configurations.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_pos">
-<code class="descname">get_pos</code><span class="sig-paren">(</span><em>axes</em>, <em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_pos" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_pos">
+<code class="sig-name descname">get_pos</code><span class="sig-paren">(</span><em class="sig-param">axes</em>, <em class="sig-param">register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get multiple position.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>axes</strong> – [str/int]</li>
-<li><strong>register</strong> – str</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axes</strong> – [str/int]</p></li>
+<li><p><strong>register</strong> – str</p></li>
 </ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">[float]</p>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[float]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_power">
-<code class="descname">get_power</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_power" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_power">
+<code class="sig-name descname">get_power</code><span class="sig-paren">(</span><em class="sig-param">axes</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_power" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get axes power state.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[bool]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[bool]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_prog_status">
-<code class="descname">get_prog_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_prog_status" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_prog_status">
+<code class="sig-name descname">get_prog_status</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_prog_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Request the state of the firmware programing operations (IcePAP user
 manual, page 112).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">{ OFF | ACTIVE &lt;progress&gt; | DONE | ERROR }</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>{ OFF | ACTIVE &lt;progress&gt; | DONE | ERROR }</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_rid">
-<code class="descname">get_rid</code><span class="sig-paren">(</span><em>rack_nrs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_rid" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_rid">
+<code class="sig-name descname">get_rid</code><span class="sig-paren">(</span><em class="sig-param">rack_nrs</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_rid" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the rack hardware identification string (IcePAP user manual pag.
 118).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>rack_nrs</strong> – [int]</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[str]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rack_nrs</strong> – int/[int]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[str]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_rtemp">
-<code class="descname">get_rtemp</code><span class="sig-paren">(</span><em>rack_nrs</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_rtemp" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_rtemp">
+<code class="sig-name descname">get_rtemp</code><span class="sig-paren">(</span><em class="sig-param">rack_nrs</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_rtemp" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the rack temperatures (IcePAP user manual pag. 123).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>rack_nrs</strong> – [int]</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[float]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>rack_nrs</strong> – int/[int]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[float]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_states">
-<code class="descname">get_states</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_states" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_states">
+<code class="sig-name descname">get_states</code><span class="sig-paren">(</span><em class="sig-param">axes</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_states" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fast read of the multiples status</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[State]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[State]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_status">
-<code class="descname">get_status</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_status" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_status">
+<code class="sig-name descname">get_status</code><span class="sig-paren">(</span><em class="sig-param">axes</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read of multiple status (IcePAP user manual pag. 128).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[int]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[int]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.get_velocity">
-<code class="descname">get_velocity</code><span class="sig-paren">(</span><em>axes</em>, <em>vtype='NOMINAL'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.get_velocity" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.get_velocity">
+<code class="sig-name descname">get_velocity</code><span class="sig-paren">(</span><em class="sig-param">axes</em>, <em class="sig-param">vtype='NOMINAL'</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.get_velocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get multiple velocities (IcePAP user manual pag. 141).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">[float]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>[float]</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pyIcePAP.controller.IcePAPController.mode">
-<code class="descname">mode</code><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.mode" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="icepap.controller.IcePAPController.items">
+<code class="sig-name descname">items</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.items" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the axes and drivers IcePAPAxis objects.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>[(axis, IcePAPAxis),]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.controller.IcePAPController.mode">
+<em class="property">property </em><code class="sig-name descname">mode</code><a class="headerlink" href="#icepap.controller.IcePAPController.mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the system mode (IcePAP user manual pag. 91).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">str</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.move">
-<code class="descname">move</code><span class="sig-paren">(</span><em>axes_pos</em>, <em>group=True</em>, <em>strict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.move" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.move">
+<code class="sig-name descname">move</code><span class="sig-paren">(</span><em class="sig-param">axes_pos</em>, <em class="sig-param">group=True</em>, <em class="sig-param">strict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.move" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start absolute movement for axes motor. The method allows aliases.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>axes_pos</strong> – [(str/int, int)]</li>
-<li><strong>group</strong> – bool</li>
-<li><strong>strict</strong> – bool</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axes_pos</strong> – [(str/int, int)]</p></li>
+<li><p><strong>group</strong> – bool</p></li>
+<li><p><strong>strict</strong> – bool</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.movep">
-<code class="descname">movep</code><span class="sig-paren">(</span><em>pos</em>, <em>axes</em>, <em>group=True</em>, <em>strict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.movep" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.movep">
+<code class="sig-name descname">movep</code><span class="sig-paren">(</span><em class="sig-param">pos</em>, <em class="sig-param">axes</em>, <em class="sig-param">group=True</em>, <em class="sig-param">strict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.movep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start axes movement to parameter value.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>pos</strong> – float</li>
-<li><strong>axes</strong> – [str/int]</li>
-<li><strong>group</strong> – bool</li>
-<li><strong>strict</strong> – bool</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos</strong> – float</p></li>
+<li><p><strong>axes</strong> – [str/int]</p></li>
+<li><p><strong>group</strong> – bool</p></li>
+<li><p><strong>strict</strong> – bool</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.pmove">
-<code class="descname">pmove</code><span class="sig-paren">(</span><em>pos</em>, <em>axes</em>, <em>group=False</em>, <em>strict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.pmove" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.pmove">
+<code class="sig-name descname">pmove</code><span class="sig-paren">(</span><em class="sig-param">pos</em>, <em class="sig-param">axes</em>, <em class="sig-param">group=False</em>, <em class="sig-param">strict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.pmove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start parameter movement.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>pos</strong> – float</li>
-<li><strong>axes</strong> – [str/int]</li>
-<li><strong>group</strong> – bool</li>
-<li><strong>strict</strong> – bool</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pos</strong> – float</p></li>
+<li><p><strong>axes</strong> – [str/int]</p></li>
+<li><p><strong>group</strong> – bool</p></li>
+<li><p><strong>strict</strong> – bool</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.print_commands">
-<code class="descname">print_commands</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.print_commands" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.print_commands">
+<code class="sig-name descname">print_commands</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.print_commands" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the allowed commands (IcePAP user manual pag. 75).</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.prog">
-<code class="descname">prog</code><span class="sig-paren">(</span><em>component</em>, <em>force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.prog" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.prog">
+<code class="sig-name descname">prog</code><span class="sig-paren">(</span><em class="sig-param">component</em>, <em class="sig-param">force=False</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.prog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Firmware programming command. This command uses the firmware code
 previously stored in the flash memory of the system master board
 (IcePAP user manual, page 112).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>component</strong> – { board adress | DRIVERS | CONTROLLERS| ALL }</li>
-<li><strong>force</strong> – Force overwrite regardless of being idential versions.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component</strong> – { board adress | DRIVERS | CONTROLLERS| ALL }</p></li>
+<li><p><strong>force</strong> – Force overwrite regardless of being idential versions.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.reboot">
-<code class="descname">reboot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.reboot" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.reboot">
+<code class="sig-name descname">reboot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.reboot" title="Permalink to this definition">¶</a></dt>
 <dd><p>System reboot (IcePAP user manual pag. 115).</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.reset">
-<code class="descname">reset</code><span class="sig-paren">(</span><em>rack_nr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.reset" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><em class="sig-param">rack_nr=None</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset system or rack (IcePAP user manual pag. 117).</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.rmove">
-<code class="descname">rmove</code><span class="sig-paren">(</span><em>axes_pos</em>, <em>group=True</em>, <em>strict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.rmove" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.rmove">
+<code class="sig-name descname">rmove</code><span class="sig-paren">(</span><em class="sig-param">axes_pos</em>, <em class="sig-param">group=True</em>, <em class="sig-param">strict=False</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.rmove" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start relative movement for axes motor. The method allows aliases.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>axes_pos</strong> – [(str/int,int)]</li>
-<li><strong>group</strong> – bool</li>
-<li><strong>strict</strong> – bool</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axes_pos</strong> – [(str/int,int)]</p></li>
+<li><p><strong>group</strong> – bool</p></li>
+<li><p><strong>strict</strong> – bool</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.send_cmd">
-<code class="descname">send_cmd</code><span class="sig-paren">(</span><em>cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.send_cmd" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.send_cmd">
+<code class="sig-name descname">send_cmd</code><span class="sig-paren">(</span><em class="sig-param">cmd</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.send_cmd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Communication function used to send any command to the IcePAP
 controller.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>cmd</strong> – string command following the Programming Interface.</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">None or list of string without the command and the CRLF.</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cmd</strong> – string command following the Programming Interface.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None or list of string without the command and the CRLF.</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.set_acctime">
-<code class="descname">set_acctime</code><span class="sig-paren">(</span><em>axes_acc</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.set_acctime" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.set_acctime">
+<code class="sig-name descname">set_acctime</code><span class="sig-paren">(</span><em class="sig-param">axes_acc</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.set_acctime" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set multiple velocities (Icepap user manual pag. 141).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes_acc</strong> – [(str/int, float)]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes_acc</strong> – [(str/int, float)]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.set_enc">
-<code class="descname">set_enc</code><span class="sig-paren">(</span><em>axes_pos</em>, <em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.set_enc" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.set_enc">
+<code class="sig-name descname">set_enc</code><span class="sig-paren">(</span><em class="sig-param">axes_pos</em>, <em class="sig-param">register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.set_enc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set multiple encoder.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>axes_pos</strong> – [(str/int,int)]</li>
-<li><strong>register</strong> – str</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axes_pos</strong> – [(str/int,int)]</p></li>
+<li><p><strong>register</strong> – str</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.set_pos">
-<code class="descname">set_pos</code><span class="sig-paren">(</span><em>axes_pos</em>, <em>register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.set_pos" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.set_pos">
+<code class="sig-name descname">set_pos</code><span class="sig-paren">(</span><em class="sig-param">axes_pos</em>, <em class="sig-param">register='AXIS'</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.set_pos" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set multiple positions.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>axes_pos</strong> – [(str/int,int)]</li>
-<li><strong>register</strong> – str</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axes_pos</strong> – [(str/int,int)]</p></li>
+<li><p><strong>register</strong> – str</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.set_power">
-<code class="descname">set_power</code><span class="sig-paren">(</span><em>axes</em>, <em>power_on=True</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.set_power" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.set_power">
+<code class="sig-name descname">set_power</code><span class="sig-paren">(</span><em class="sig-param">axes</em>, <em class="sig-param">power_on=True</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.set_power" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set axes power state.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>axes</strong> – [str/int]</li>
-<li><strong>power_on</strong> – bool</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>axes</strong> – [str/int]</p></li>
+<li><p><strong>power_on</strong> – bool</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.set_velocity">
-<code class="descname">set_velocity</code><span class="sig-paren">(</span><em>axes_vel</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.set_velocity" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.set_velocity">
+<code class="sig-name descname">set_velocity</code><span class="sig-paren">(</span><em class="sig-param">axes_vel</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.set_velocity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set multiple velocities (Icepap user manual pag. 141).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes_vel</strong> – [(str/int, float)]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes_vel</strong> – [(str/int, float)]</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.sprog">
-<code class="descname">sprog</code><span class="sig-paren">(</span><em>component=None</em>, <em>force=False</em>, <em>saving=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.sprog" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.sprog">
+<code class="sig-name descname">sprog</code><span class="sig-paren">(</span><em class="sig-param">component=None</em>, <em class="sig-param">force=False</em>, <em class="sig-param">saving=False</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.sprog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Firmware programming command. This command assumes that the firmware
 code will be transferred as a binary data block (IcePAP user manual,
 page 112).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>component</strong> – { NONE | board adress | DRIVERS | CONTROLLERS| ALL }</li>
-<li><strong>force</strong> – Force overwrite regardless of being idential versions.</li>
-<li><strong>saving</strong> – Saves firmware into master board flash.</li>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component</strong> – { NONE | board adress | DRIVERS | CONTROLLERS| ALL }</p></li>
+<li><p><strong>force</strong> – Force overwrite regardless of being idential versions.</p></li>
+<li><p><strong>saving</strong> – Saves firmware into master board flash.</p></li>
 </ul>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="method">
-<dt id="pyIcePAP.controller.IcePAPController.stop">
-<code class="descname">stop</code><span class="sig-paren">(</span><em>axes</em><span class="sig-paren">)</span><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.stop" title="Permalink to this definition">¶</a></dt>
+<dt id="icepap.controller.IcePAPController.stop">
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><em class="sig-param">axes</em><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop multiple axis movement (IcePAP user manual pag. 129).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>axes</strong> – [str/int]</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>axes</strong> – [str/int]</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pyIcePAP.controller.IcePAPController.ver">
-<code class="descname">ver</code><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.ver" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="icepap.controller.IcePAPController.update_axes">
+<code class="sig-name descname">update_axes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#icepap.controller.IcePAPController.update_axes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method to check if the axes created are presents. In case of no,
+the method will remove the IcePAPAxis object and its aliases.</p>
+<p>Note: The axis can be present but not alive</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="icepap.controller.IcePAPController.ver">
+<em class="property">property </em><code class="sig-name descname">ver</code><a class="headerlink" href="#icepap.controller.IcePAPController.ver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the version of the all driver modules: Driver, DSP, FPGA, PCB, IO
 (IcePAP user manual pag. 144).</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dict{module: (ver, date)}</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dict{module: (ver, date)}</p>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="pyIcePAP.controller.IcePAPController.ver_saved">
-<code class="descname">ver_saved</code><a class="headerlink" href="#pyIcePAP.controller.IcePAPController.ver_saved" title="Permalink to this definition">¶</a></dt>
+<dl class="method">
+<dt id="icepap.controller.IcePAPController.ver_saved">
+<em class="property">property </em><code class="sig-name descname">ver_saved</code><a class="headerlink" href="#icepap.controller.IcePAPController.ver_saved" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the firmware version stored in the master flash memory.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">dict{}</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dict{}</p>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
@@ -884,7 +789,7 @@ page 112).</p>
         <a href="axis.html" class="btn btn-neutral float-right" title="Axis layer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="communication.html" class="btn btn-neutral" title="Communication layer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="communication.html" class="btn btn-neutral float-left" title="Communication layer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -893,7 +798,7 @@ page 112).</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright Copyright 2008-2017 CELLS / ALBA Synchrotron, Bellaterra, Spain.
+        &copy; Copyright Copyright 2008-2017 CELLS / ALBA Synchrotron, Bellaterra, Spain
 
     </p>
   </div>
@@ -910,33 +815,16 @@ page 112).</p>
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'2.7.0',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-      <script type="text/javascript" src="_static/language_data.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
